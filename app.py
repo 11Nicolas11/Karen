@@ -40,7 +40,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🔮 MOTOR DE ANÁLISIS ACÚSTICO Y GUÍAS DE ONDA (v5.2)")
+st.title(" MOTOR DE ANÁLISIS ACÚSTICO Y GUÍAS DE ONDA (v5.2)")
 st.caption("Consola computacional para la simulación de campos de presión, modos resonantes y cinemática de fluidos comprensibles.")
 st.markdown("---")
 
@@ -59,7 +59,7 @@ with tab_workspace[0]:
      
     with col_c1:
         st.markdown('<div class="control-panel">', unsafe_allow_html=True)
-        st.subheader("⚙️ Propiedades Termofísicas del Medio")
+        st.subheader(" Propiedades Termofísicas del Medio")
         medio_index = st.selectbox(
             "Medio de Propagación (Velocidad de Fase):", 
             ["Aire Estándar (Gaseoso ~343 m/s)", "Agua Destilada (Líquido ~1533 m/s)", "Acero Estructural (Sólido ~3560 m/s)"]
@@ -67,7 +67,7 @@ with tab_workspace[0]:
         v_fase = 343.0 if "Aire" in medio_index else 1533.0 if "Agua" in medio_index else 3560.0
          
         st.markdown("---")
-        st.subheader("⚡ Parámetros de la Fuente de Excitación")
+        st.subheader(" Parámetros de la Fuente de Excitación")
         amplitud_móvil = st.slider("Amplitud de Presión Máxima (P₀) [Pa]", 0.5, 3.0, 1.5, step=0.1)
         frec_hz = st.number_input("Frecuencia de la Fuente (f) [Hz]", min_value=50.0, max_value=500.0, value=220.0, step=20.0)
         tiempo_instante = st.number_input("Tiempo de Observación (t) [s]", min_value=0.00, value=0.00, step=0.002, format="%.3f", key="p_time")
@@ -182,7 +182,7 @@ with tab_workspace[2]:
      
     with col_c3:
         st.markdown('<div class="control-panel">', unsafe_allow_html=True)
-        st.subheader("📐 Geometría y Condiciones de Frontera")
+        st.subheader(" Geometría y Condiciones de Frontera")
          
         frontera_tipo = st.radio(
             "Condiciones de Contorno de la Guía:",
