@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 # 1. CONFIGURACIÓN DE PANTALLA COMPLETA Y TEMA MORADO SUAVE (LAVANDA TECH)
 st.set_page_config(
     page_title="Acoustic Waveguide Engine",
-    page_icon="🔮",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -145,7 +145,7 @@ with tab_workspace[1]:
      
     with col_c2:
         st.markdown('<div class="control-panel">', unsafe_allow_html=True)
-        st.subheader("🚨 Cinemática de la Fuente")
+        st.subheader(" Cinemática de la Fuente")
         f_emision_dop = st.number_input("Frecuencia de Emisión en Reposo (f₀) [Hz]", value=160.0, step=10.0)
         v_vector_dop = st.slider("Velocidad de la Fuente (v_s) [m/s]", 0.0, 300.0, 120.0, step=10.0)
         st.markdown('</div>', unsafe_allow_html=True)
@@ -203,7 +203,7 @@ with tab_workspace[2]:
             nu_eigen = ((2 * indice_modo_m - 1) * c_sonido_base) / (4 * longitud_caligrafica)
             f_espacial = lambda X: np.sin(((2 * indice_modo_m - 1) * np.pi * X) / (2 * longitud_caligrafica))
              
-        st.info(f"🎯 Frecuencia Propia Computada (fₙ): {nu_eigen:.2f} Hz")
+        st.info(f" Frecuencia Propia Computada (fₙ): {nu_eigen:.2f} Hz")
          
         # Malla continua para el mapa de calor bidimensional
         x_plano = np.linspace(0, longitud_caligrafica, 200)
