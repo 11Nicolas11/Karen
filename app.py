@@ -105,23 +105,23 @@ with tab_workspace[0]:
         )
         st.plotly_chart(fig_particulas, use_container_width=True)
 
-        # ---- GRAFICA 2: ONDA CONTINUA (TIPO ONDA SENOIDAL CIAN) ----
+        # ---- GRAFICA 2: ONDA CONTINUA (TIPO ONDA SENOIDAL CORREGIDA A MORADO) ----
         x_continuo = np.linspace(0, 10, 500)
         y_continuo = amplitud_móvil * np.sin(k_num * x_continuo - omega_rad * tiempo_instante)
 
         fig_onda = go.Figure()
-        # Trazo de la línea principal (Cian brillante)
+        # Trazo de la línea principal cambiada a Morado Lavanda Eléctrico
         fig_onda.add_trace(go.Scatter(
             x=x_continuo, y=y_continuo,
             mode='lines',
-            line=dict(color='#00e5ff', width=2.5)
+            line=dict(color='#b388ff', width=2.5)
         ))
-        # Efecto de sombreado / área bajo la curva sutil
+        # Efecto de sombreado / área bajo la curva modificado a la paleta morada traslúcida
         fig_onda.add_trace(go.Scatter(
             x=x_continuo, y=y_continuo,
             mode='lines',
             fill='tozeroy',
-            fillcolor='rgba(0, 229, 255, 0.05)',
+            fillcolor='rgba(179, 136, 255, 0.08)',
             line=dict(width=0),
             showlegend=False
         ))
